@@ -20,7 +20,6 @@ class InputUserMessage(BaseModel):
     "broker-topic",
     group_id="test-group",
     auto_offset_reset="earliest",
-    # ack_policy=AckPolicy.ACK,
 )
 async def broker_route(
     user: InputUserMessage,
@@ -33,7 +32,6 @@ async def broker_route(
     "router-topic",
     group_id="test-group",
     auto_offset_reset="earliest",
-    # ack_policy=AckPolicy.ACK,
 )
 async def router_route(
     user: InputUserMessage,
